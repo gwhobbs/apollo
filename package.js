@@ -1,6 +1,6 @@
 Package.describe({
   name: "cultofcoders:apollo",
-  version: "0.10.1",
+  version: "0.10.2",
   // Brief, one-line summary of the package.
   summary: "Meteor & Apollo integration",
   // URL to the Git repository containing the source code for this package.
@@ -11,15 +11,15 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom("1.3");
+  api.versionsFrom(["1.3", "2.3"]);
   api.use("ecmascript");
   api.use("check");
   api.use("ejson");
   api.use("mongo");
 
-  api.use("tmeasday:check-npm-versions@0.3.2");
-  api.use("cultofcoders:grapher@1.3.13");
-  api.use("cultofcoders:grapher-schema-directives@0.1.8");
+  api.use("tmeasday:check-npm-versions@1.0.2");
+  api.use("cultofcoders:grapher@1.3.21-alpha.0");
+  api.use("cultofcoders:grapher-schema-directives@0.1.9");
   api.use("accounts-base", { weak: true });
 
   api.mainModule("client/index.js", "client");
