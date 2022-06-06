@@ -17,5 +17,5 @@ checkNpmVersions({
   graphql: '16.x.x',
   'graphql-load': '0.1.x',
   'graphql-type-json': '0.x.x',
-  '@graphql-tools/utils': '7.x.x',
+  'graphql-tools': '4.x.x',
 });
