@@ -13,9 +13,9 @@ export { default as expose } from './morpher/expose';
 export { load, db, getRenderer };
 
 checkNpmVersions({
-  'apollo-server-express': '2.x.x',
-  graphql: '14.x.x',
+  'apollo-server-express': '3.x.x',
+  graphql: '16.x.x',
   'graphql-load': '0.1.x',
   'graphql-type-json': '0.x.x',
-  'graphql-tools': '4.x.x',
+  '@graphql-tools/utils': '7.x.x',
 });
