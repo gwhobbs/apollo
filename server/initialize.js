@@ -13,6 +13,7 @@ import { getUserForContext } from './core/users';
  * @param {MeteorApolloConfig} meteorApolloConfig
  */
 export default function initialize(apolloConfig = {}, meteorApolloConfig = {}) {
+  console.log('intializing apollo');
   meteorApolloConfig = Object.assign(
     {
       gui: Meteor.isDevelopment,
@@ -64,7 +65,8 @@ export default function initialize(apolloConfig = {}, meteorApolloConfig = {}) {
     gui: meteorApolloConfig.gui,
   });
 
-  server.installSubscriptionHandlers(WebApp.httpServer);
+  // TODO: find out why this is causing the app to crash on load (except graphql endpoint)
+  // server.installSubscriptionHandlers(WebApp.httpServer);
 
   meteorApolloConfig.middlewares.forEach(middleware => {
     WebApp.connectHandlers.use('/graphql', middleware);
